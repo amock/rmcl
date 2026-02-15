@@ -1,32 +1,17 @@
-name: jazzy
+name: Jazzy CI
+
 on:
   push:
     branches:
-      - 'main'
       - 'jazzy'
+      - 'main'
   pull_request:
-    branches:
-      - 'main'
-      - 'jazzy'
   workflow_dispatch:
     branches:
       - '*'
 jobs:
-  ros_jazzy:
-    name: jazzy
-    runs-on: ubuntu-24.04
-    strategy:
-      fail-fast: false
-    steps:
-      - name: Setup ROS jazzy
-        uses: ros-tooling/setup-ros@v0.7
-        with:
-          required-ros-distributions: jazzy
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Build and Test
-        uses: ros-tooling/action-ros-ci@0.3.13
-        with:
-          target-ros2-distro: jazzy
-          vcs-repo-file-url: $GITHUB_WORKSPACE/source_dependencies.yaml
-          rosdep-check: true
+  jazzy_build_and_test:
+    uses: naturerobots/github_automation_public/.github/workflows/ros_ci.yaml@main
+    secrets: inherit
+    with:
+      ros_distro: jazzy
