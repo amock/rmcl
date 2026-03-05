@@ -52,12 +52,12 @@ Please reference the following paper when using the MICP-L method in your scient
 
 ```bib
 @inproceedings{mock2024micpl,
-  title={{MICP-L}: Mesh-based ICP for Robot Localization Using Hardware-Accelerated Ray Casting}, 
-  author={Mock, Alexander and Wiemann, Thomas and Pütz, Sebastian and Hertzberg, Joachim},
-  booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
-  year={2024},
-  pages={10664-10671},
-  doi={10.1109/IROS58592.2024.10802360}
+  title     = {{MICP-L}: Mesh-based ICP for Robot Localization Using Hardware-Accelerated Ray Casting}, 
+  author    = {Mock, Alexander and Wiemann, Thomas and Pütz, Sebastian and Hertzberg, Joachim},
+  booktitle = {2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  year      = {2024},
+  pages     = {10664-10671},
+  doi       = {10.1109/IROS58592.2024.10802360}
 }
 ```
 
@@ -75,29 +75,28 @@ See the longer pre-release video [here](https://www.youtube.com/watch?v=whuEqYdk
 
 ### Publication
 
-
-
 Since **Ray MCL** is still in a pre-release stage, no formal publication is available at this time. When using **RMCL** in your scientific work, please reference one of the closely related projects such as [**rmagine**](https://github.com/uos/rmagine) or [**MICP-L**](https://ieeexplore.ieee.org/document/10802360), as many of their concepts have been incorporated into RMCL, and are covered in
 
 ```bib
 @phdthesis{amock2025inverse,
   author = {Alexander Mock},
-  title = {Inverse Sensor Modeling for 6D Mobile Robot Localization in Scene Graphs via Hardware-Accelerated Ray Tracing}
-  year = {2025},
-  doi = {10.48693/802}
-  school = "Universität Osnabrück"}
+  title  = {Inverse Sensor Modeling for 6D Mobile Robot Localization in Scene Graphs via Hardware-Accelerated Ray Tracing}
+  year   = {2025},
+  doi    = {10.48693/802},
+  school = {Universität Osnabrück}
+}
 ```
 
 Available open access [**here**](https://osnadocs.ub.uni-osnabrueck.de/handle/ds-2025112613801). Alternatively, you may cite this software package directly as follows:
 
 ```bib
 @software{amock2025rmcl,
-  author = {Alexander Mock},
-  title = {{RMCL: Mobile Robot Localization in 3D Triangle Meshes \& Geometric Scene Graphs}},
+  author  = {Alexander Mock},
+  title   = {{RMCL: Mobile Robot Localization in 3D Triangle Meshes \& Geometric Scene Graphs}},
   license = {BSD-3-Clause},
-  url = {https://github.com/uos/rmcl},
-  year = {2025},
-  month = {10}
+  url     = {https://github.com/uos/rmcl},
+  year    = {2025},
+  month   = {10}
 }
 ```
 
