@@ -16,5 +16,5 @@ jobs:
     name: ros2-jazzy
     uses: ./.github/workflows/ros2_template.yml
     with:
-      os: ubuntu-24.04
+      base: ubuntu-noble-latest
       ros_distro: jazzy
