@@ -22,10 +22,47 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build and test
+      - name: Build
         uses: ros-tooling/action-ros-ci@v0.4
         with:
           package-name: rmcl
           target-ros2-distro: ${{ inputs.ros_distro }}
           vcs-repo-file-url: $GITHUB_WORKSPACE/source_dependencies.yaml
           rosdep-check: true
+          no-symlink-install: true
+          skip-tests: true
+
+      - name: Upload workspace artifact 
+        uses: actions/upload-artifact@v4
+        with:
+          name: ros2-${{ inputs.ros_distro }}-workspace
+          path: ${{ steps.action_ros_ci_step.outputs.ros-workspace-directory-name }}
+
+  colcon-test:
+    name: test
+    runs-on: ubuntu-latest
+
+    container: 
+      image: ${{ inputs.docker_base_image }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # hope that speeds up compile time for testing
+      - name: Download workspace artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ros2-${{ inputs.ros_distro }}-workspace
+
+      - name: Test
+        uses: ros-tooling/action-ros-ci@v0.4
+        with:
+          package-name: rmcl
+          target-ros2-distro: ${{ inputs.ros_distro }}
+          workspace-directory: ${{ steps.download_artifact_step.outputs.downloaded-artifact-path }}
+          rosdep-check: true
+          no-symlink-install: true
+          skip-tests: false
+      
+      
