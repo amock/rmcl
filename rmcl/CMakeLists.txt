@@ -61,6 +61,8 @@ endif()
 # only print warning for Rmagine version greater than RMAGINE_MAX_VERSION
 set(RMAGINE_MAX_VERSION "2.5.0")
 
+message(STATUS "CMAKE_PREFIX_PATH: ${CMAKE_PREFIX_PATH}")
+
 find_package(rmagine 2.4.0
     COMPONENTS
         core
