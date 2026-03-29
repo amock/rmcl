@@ -12,9 +12,9 @@ on:
       - '*'
 
 jobs:
-  jazzy:
-    name: ros2-jazzy
+  humble:
+    name: ros2-humble
     uses: ./.github/workflows/ros2_template.yml
     with:
-      docker_base_image: rostooling/setup-ros-docker:ubuntu-noble-latest
-      ros_distro: jazzy
+      base_docker: rostooling/setup-ros-docker:ubuntu-jammy-latest
+      ros_distro: humble

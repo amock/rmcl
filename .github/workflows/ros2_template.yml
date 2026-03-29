@@ -3,7 +3,7 @@ name: ros2_template
 on:
   workflow_call:
     inputs:
-      base:
+      docker_base_image:
         required: true
         type: string
       ros_distro:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: rostooling/setup-ros-docker:${{ inputs.base }}
+      image: ${{ inputs.docker_base_image }}
 
     steps:
       - name: Checkout
