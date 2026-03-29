@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build and test
-        uses: ros-tooling/action-ros-ci@0.4
+        uses: ros-tooling/action-ros-ci@v0.4
         with:
           package-name: rmcl
           target-ros2-distro: ${{ inputs.ros_distro }}
