@@ -62,7 +62,7 @@ jobs:
         with:
           package-name: rmcl
           target-ros2-distro: ${{ inputs.ros_distro }}
-          workspace-directory: ${{ steps.download_artifact_step.outputs.downloaded-artifact-path }}
+          vcs-repo-file-url: $GITHUB_WORKSPACE/source_dependencies.yaml
           rosdep-check: true
           no-symlink-install: true
           skip-tests: false
