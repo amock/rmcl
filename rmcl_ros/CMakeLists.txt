@@ -48,7 +48,7 @@ find_package(visualization_msgs REQUIRED)
 find_package(std_srvs REQUIRED)
 
 
-find_package(rmagine 2.4.0
+find_package(rmagine 2.4
     COMPONENTS
         core
     OPTIONAL_COMPONENTS
@@ -59,7 +59,7 @@ find_package(rmagine 2.4.0
         vulkan-cuda-interop
 )
 
-find_package(rmcl 2.4.0 REQUIRED)
+find_package(rmcl 2.4 REQUIRED)
 include_directories(${rmcl_INCLUDE_DIR})
 
 # TODO: we can do this better. maybe put definitions to each target?
