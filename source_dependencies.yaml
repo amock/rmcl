@@ -4,4 +4,4 @@ repositories:
   rmagine:
     type: git
     url: https://github.com/uos/rmagine.git
-    version: main
+    version: ros-workflows
