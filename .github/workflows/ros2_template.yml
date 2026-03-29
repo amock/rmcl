@@ -23,6 +23,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build
+        id: action_ros_ci_step
         uses: ros-tooling/action-ros-ci@v0.4
         with:
           package-name: rmcl
