@@ -41,6 +41,7 @@ jobs:
   colcon-test:
     name: test
     runs-on: ubuntu-latest
+    needs: colcon-build
 
     container: 
       image: ${{ inputs.docker_base_image }}
