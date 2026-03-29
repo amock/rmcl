@@ -1,4 +1,4 @@
-name: ros2_jazzy
+name: ros2_humble
 
 on:
   push:
@@ -16,5 +16,5 @@ jobs:
     name: ros2-humble
     uses: ./.github/workflows/ros2_template.yml
     with:
-      base_docker: rostooling/setup-ros-docker:ubuntu-jammy-latest
+      docker_base_image: rostooling/setup-ros-docker:ubuntu-jammy-latest
       ros_distro: humble
