@@ -37,7 +37,7 @@ if (NOT EXISTS ${CMAKE_BINARY_DIR}/CMakeCache.txt)
   endif()
 endif()
 
-set_property(GLOBAL PROPERTY USE_FOLDERS On)
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set_property(GLOBAL PROPERTY FIND_LIBRARY_USE_LIB64_PATHS ON)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -51,7 +51,6 @@ set(CMAKE_TMP_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/tmp)
 
 list(APPEND CMAKE_MODULE_PATH ${rmcl_SOURCE_DIR}/cmake)
 
-
 find_package(TBB REQUIRED)
 if(TARGET TBB::tbb)
     set(TBB_INCLUDE_DIRS "")
@@ -61,7 +60,7 @@ endif()
 # only print warning for Rmagine version greater than RMAGINE_MAX_VERSION
 set(RMAGINE_MAX_VERSION "2.5.0")
 
-find_package(rmagine 2.4.0
+find_package(rmagine 2.4
     COMPONENTS
         core
     OPTIONAL_COMPONENTS
