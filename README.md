@@ -107,7 +107,7 @@ Available open access [**here**](https://osnadocs.ub.uni-osnabrueck.de/handle/ds
 
 Dependencies:
 - ROS 2 (check compatible branches)
-- Download and put [Rmagine](https://github.com/uos/rmagine) (v >= 2.3.2) into your ROS workspace.
+- Download and put [Rmagine](https://github.com/uos/rmagine) (v >= 2.4.0) into your ROS workspace.
   - Recommended: Install OptiX backend if NVIDIA GPU is available.
 - Optional for functionality, but required for visualizations: [mesh_tools](https://github.com/naturerobots/mesh_tools).
 
